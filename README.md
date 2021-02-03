@@ -12,4 +12,3 @@ In this project here are some skills that I showcase:
 - CSS layout using Flexbox
 - CSS animations
 
-Please note that this project is not mobile responsive and not hosted anywhere **yet**

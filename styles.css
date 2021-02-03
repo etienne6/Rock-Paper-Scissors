@@ -1,0 +1,131 @@
+* {
+  /* css reset */
+  padding: 0px;
+  margin: 0px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "ARCADE CLASSIC";
+  src: url("assets/fonts/arcadeclassic/ARCADECLASSIC.TTF");
+}
+
+.game-title,
+.match-results {
+  font-family: "ARCADE CLASSIC";
+  font-weight: normal;
+  text-align: center;
+  word-spacing: 20px;
+}
+
+.game-title {
+  font-size: 72px;
+}
+
+.match-results {
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.game-main-body {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 80px;
+  font-family: "ARCADE CLASSIC";
+}
+
+.username,
+.score {
+  font-size: 44px;
+}
+
+img {
+  position: relative;
+  padding: 40px 0px;
+  height: 100px;
+  width: 130px;
+}
+
+.animate {
+  animation-name: RPS;
+  animation-iteration-count: 3;
+  animation-duration: 0.75s;
+}
+
+.computer img {
+  transform: rotateY(180deg);
+}
+
+@keyframes RPS {
+  from {
+    bottom: 35px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+.player-moves {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.option {
+  position: relative;
+  font-family: "ARCADE CLASSIC";
+  font-size: 22px;
+  width: 150px;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+.option.rock {
+  background-color: #92cd41;
+}
+
+.option.paper {
+  margin: 0px 20px;
+  background-color: #f7d51d;
+}
+
+.option.scissors {
+  background-color: #e76e55;
+}
+
+/* 8 bit border styles */
+
+.option::before,
+.option::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.option::before {
+  left: 0;
+  top: -4px;
+  border-top: 4px black solid;
+  border-bottom: 4px black solid;
+}
+
+.option::after {
+  left: -4px;
+  top: 0;
+  border-left: 4px black solid;
+  border-right: 4px black solid;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
